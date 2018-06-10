@@ -1,2 +1,2 @@
-# chat-program
+# PyChat
 A simple chat program written with python.
