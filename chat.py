@@ -1,6 +1,5 @@
 #Required module to send messages
 import socket
-import glob
 
 #If colorama is not installed the program will exit
 try:
@@ -10,6 +9,8 @@ except:
 	print("Colorama not installed")
 	print("Please install to continue")
 	exit()
+
+
 
 def __init__():
 	init()
