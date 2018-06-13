@@ -1,33 +1,39 @@
-#Required module to send messages
 import socket
 
-#If colorama is not installed the program will exit
 try:
-	import colorama
-	from colorama import init
+    import colorama
 except:
-	print("Colorama not installed")
-	print("Please install to continue")
-	exit()
-
-
+    print("Please install colorama to continue")
+    exit()
 
 def __init__():
-	init()
+    colorama.init()
+    
+    global host
+    global port
 
-	#Makes variables "port" and "host" global variables
-	global port
-	global host
-	
-	port = 8010		#Port used to send messages through
-					#This port must have port forwarding turned on
-	
-	host = "192.168.0.53"	#Hosts ip address
-	
-	return host
-	return port
+    port = 80
+    host = "127.0.0.1"
+
+    return host
+    return port
 
 __init__()
 
-
-
+def main():
+    mySocket = socket.socket()
+    mySocket.bind((host,port))
+     
+    mySocket.listen(1)
+    conn, addr = mySocket.accept()
+    print (colorama.Fore.GREEN + "Connection from: " + str(addr))
+    while True:
+            data = conn.recv(1024).decode()
+            if not data:
+                    break
+            print (colorama.Fore.YELLOW + str(data))
+             
+    conn.close()
+     
+if __name__ == '__main__':
+    main()
