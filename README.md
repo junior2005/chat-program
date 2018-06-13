@@ -8,7 +8,7 @@ colorama run this command: `sudo pip3 install colorama`
 ###Configuring your router
 To send messages *outside* of your network you must have port forwarding turned on for
 the port specified in the code, `port = 80`
-Click the link to learn how to turn on port forwarding
+Click the link to learn how to turn on port forwarding.
 https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router
 
 
