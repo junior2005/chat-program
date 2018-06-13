@@ -27,12 +27,13 @@ def main():
     mySocket.listen(1)
     conn, addr = mySocket.accept()
     print (colorama.Fore.GREEN + "Connection from: " + str(addr))
+    colorama.Fore.YELLOW
     while True:
             data = conn.recv(1024).decode()
             if not data:
                     break
             print (colorama.Fore.YELLOW + str(data))
-             
+            conn.send(data.encode())             
     conn.close()
      
 if __name__ == '__main__':
