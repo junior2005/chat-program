@@ -1,4 +1,5 @@
 import socket
+import sys
 
 try:
     import colorama
@@ -13,7 +14,12 @@ def __init__():
     global port
 
     port = 80
-    host = "127.0.0.1"
+    try:
+        host = sys.argv[1]
+        host = str(host)
+    except:
+        print("Host argument not given")
+        exit()
 
     return host
     return port
@@ -38,3 +44,5 @@ def main():
      
 if __name__ == '__main__':
     main()
+
+colorama.deinit()
