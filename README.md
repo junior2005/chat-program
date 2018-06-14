@@ -14,7 +14,7 @@ https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router
 
 
 ## Connecting to the host
-To start teh server the command is `python chat.py "hostname"` To start the client the command
+To start the server the command is `python chat.py "hostname"` To start the client the command
 is `python client.py "hostname"`
 
 After you have the host run **chat.py** and wait for host to connect
