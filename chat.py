@@ -13,7 +13,7 @@ def __init__():
     global host
     global port
 
-    port = 80
+    port = 70
     try:
         host = sys.argv[1]
         host = str(host)
